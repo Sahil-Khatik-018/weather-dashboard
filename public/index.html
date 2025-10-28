@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySense Weather</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="weather-bg"></div>
+    <header>
+        <h1>SkySense Weather</h1>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <section id="search-section">
+                <h2>Search City</h2>
+                <form id="search-form">
+                    <input id="search-input" type="text" placeholder="Enter city name..." />
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+
+            <section id="history-section">
+                <h2>Recent Searches</h2>
+                <div id="history-container"></div>
+            </section>
+        </aside>
+
+        <section class="weather-display">
+            <div id="error-container" class="error-message hidden"></div>
+            <div id="loader" class="loader hidden">Loading...</div>
+
+            <div class="current-weather-section">
+                <h2 id="city-name">City Name</h2>
+                <p id="temperature">Temperature:</p>
+                <p id="humidity">Humidity:</p>
+                <p id="wind-speed">Wind Speed:</p>
+            </div>
+
+            <div class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div id="forecast-container" class="forecast-cards-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
