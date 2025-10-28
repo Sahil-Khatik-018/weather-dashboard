@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get("/api/weather/coords", async (req, res) => {
     try {
@@ -71,6 +72,10 @@ app.get("/api/weather/:city", async (req, res) => {
             error: 'Failed to fetch weather data. ' + err.message
         });
     }
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(port, () => {
