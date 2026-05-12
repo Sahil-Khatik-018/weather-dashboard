@@ -1,4 +1,3 @@
-// openweathermap api -> username: sahilkhatik786, password: Sahil@1705
 const cityName = document.querySelector('#city-name');
 const temperature = document.querySelector('#temperature')
 const humidity = document.querySelector('#humidity');
